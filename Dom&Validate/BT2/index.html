@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function account(str) {
+        RegExp = /^[_a-z0-9]{6,}$/;
+        if (RegExp.test(str)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      // mẫu account hợp lệ
+      console.log(account("123abc_"));
+      console.log(account("_abc123"));
+      console.log(account("______"));
+      console.log(account("123456"));
+      console.log(account("abcdefg"));
+
+      // mẫu account không hợp lệ
+      console.log(account(".@"));
+      console.log(account("12345"));
+      console.log(account("1234_"));
+      console.log(account("abcde "));
+    </script>
+  </body>
+</html>

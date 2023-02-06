@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      class thongTin {
+        constructor(name, descript) {
+          this.name = name;
+          this.descript = descript;
+        }
+
+        cal(input = 1) {
+          return Math.pow(input, 3);
+        }
+      }
+
+      class hinhHoc extends thongTin {
+        constructor(chieuDai, descript) {
+          super(descript);
+          this.chieuDai = chieuDai;
+        }
+
+        cal() {
+          return Math.pow(this.chieuDai, 3);
+        }
+      }
+
+      let a = new hinhHoc(3.5);
+      console.log(a.descript);
+      console.log(a.cal());
+      console.log(a.name);
+    </script>
+  </body>
+</html>

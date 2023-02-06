@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = name;
+        }
+
+        getName = () => {
+          return this.name;
+        };
+
+        setName = (value) => {
+          this.name = value;
+        };
+
+        walk() {
+          console.log(`${this.name} walk`);
+        }
+      }
+
+      class Programmer extends Person {
+        constructor(name, codeLanguage) {
+          super(name);
+          this.name = name;
+          this.codeLanguage = codeLanguage;
+        }
+
+        getCodeLanguage() {
+          return this.codeLanguage;
+        }
+
+        setCodeLanguage(value) {
+          this.codeLanguage = value;
+        }
+
+        writeCode() {
+          console.log(`${this.name} is coding by ${this.codeLanguage}`);
+        }
+      }
+    </script>
+  </body>
+</html>
